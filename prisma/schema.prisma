@@ -18,8 +18,8 @@ enum SmokeType {
 
 model User {
   id          Int         @id
-  lives       Int
-  smokedDates DateTime[]
+  lives       Int         @default(5)
+  smokedDates DateTime[]  @default([])
   smokeType   SmokeType
   cigs        Cigs?
   pods        Pods?
